@@ -193,9 +193,11 @@ li a {
 }
 .image{
    
-    border: 3px solid black;
+    border: 1px solid lightgray;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+
     
 }
 .image:nth-of-type(1) {
