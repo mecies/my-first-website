@@ -27,63 +27,88 @@ header{
     font-family: 'Pacifico', cursive;
     margin-left: 25%;
     margin-top: 3%;
+    
 }
+
 h1{
-    margin-top: -5%;
+    position: relative;
+    bottom: 15%;
     font-family: sans-serif;
     font-weight: 700;
     font-size: 5rem;
 }
 p{
     position: relative;
+    text-align: justify;
     justify-content: center;
-    margin-top: 5%;
+    
     font-family: sans-serif;
     width: 40%;
     line-height: 1.8;
     font-size: 1.2rem;
 }
-.confirm1{
+button.confirm1{
+    padding: 2%;
+    content: 'GET FREE NOW';
     margin-top: 5%;
-    height: 40px;
-    width: 20%;
+    height: 10%;
+    width: 30%;
     background: orange;
     color: white;
     font-weight: 700;
     font-size: 1rem;
     border: none;
+    transition: all .5s linear;
+    
+}
+
+button.confirm1:hover{
+    background-color: orangered;
+}
+button.confirm1:active{
+    transform: rotate(360);
 }
 .nav ul{
     
     display: grid;
     width: 100%;
     grid-template-columns: repeat(6, 1fr);
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: space-around;
     list-style-type: none;
     margin-top: 7%;
+    grid-gap: 2%;
     
 }
 li a:hover{
     
-    color:black;
-    border-top: 3px solid orange;
+    color:white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-decoration: none;
 
 }
 li a:visited {
-    color:black;
+    color:white;
     text-decoration: none;
 }
 li a:link {
     
-    color:black;
+    color:white;
     text-decoration: none;
 }
 li a {
+    display:grid;
+    position: relative;
+    justify-content: center;
+    
+    right: 20%;
     font-family: sans-serif;
     text-decoration: none;
     font-weight: 700;
+    border: 1px solid lightgray;
+    background: orange;
+    padding: 5%;
 }
 .content{
     display: grid;
@@ -154,14 +179,11 @@ li a {
     display: grid;
     grid-template-rows: 1fr 3fr;
     grid-template-columns: 1fr;
-    height: 1000px;
+    height: 1200px;
     align-content: stretch;
     width: auto;
     grid-row-gap: 0px;
-    
-    background-color: yellow;
-    
-      
+    background-color: yellow;     
 }
 
 
@@ -180,6 +202,7 @@ li a {
     height: auto;
     justify-content: center;
     grid-gap: 3%;
+    bottom: 5%;
     
 }
 .galLogo{
@@ -197,44 +220,89 @@ li a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: all .5s ease-in-out;
+    position: relative;
+   
 
     
 }
+
 .image:nth-of-type(1) {
    
     grid-row: span 2;
     background-image: url("../img/gal1.png");
     display: flex;
     position: relative;
-    
-     
-
 }
+.image:hover:nth-of-type(1) {
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+
 .image:nth-of-type(2) {
     
     background-image: url("../img/gal2.png");
-    
+    position: relative;
+
+}
+.image:hover:nth-of-type(2) {
+
+   transform: rotate(5deg);
+   opacity: 0.7;
 
 }
 .image:nth-of-type(3) {
     
     background-image: url("../img/gal3.png");
-    
 
+}
+.image:hover:nth-of-type(3) {
+
+    transform: rotate(5deg);
+    opacity: 0.7;
+    
 
 }
 .image:nth-of-type(4) {
     
     background-image: url("../img/gal4.png");
     
-   
+}
+.image:hover:nth-of-type(5) {
+
+    
+    animation: goleft 1.5s 2 alternate;
+
 }
 .image:nth-of-type(5) {
     
     background-image: url("../img/gal5.png");
    
-    
 }
+.image:hover:nth-of-type(4) {
+   
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+/*animation*/
+@keyframes goleft {
+    0% {
+        right: 100px;
+        transform: rotate(-7deg)
+    }
+
+    50% {
+        right: 350px;
+        transform: rotate(-14deg)
+    }
+
+    100% {
+        right: 350px;
+        transform: rotate(-7deg)
+    }
+}
+
+
 
 
 
